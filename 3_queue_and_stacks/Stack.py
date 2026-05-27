@@ -39,7 +39,21 @@ class Stack:
     def length(self):
         return self.size
     
+    def isEmpty(self):
+        return self.size == 0 
+    
     def top(self):
         if self.head is None:
             raise IndexError("Stack is empty!")
         return self.head.val
+    
+    def __str__(self):
+        values = []
+        
+        currentNode = self.head
+        
+        while currentNode != None:
+            values.append(currentNode.val)
+            currentNode = currentNode.next
+            
+        return f"{values}"

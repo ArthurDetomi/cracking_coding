@@ -8,6 +8,9 @@ class Queue:
         self.head = None
         self.tail = None
         self.size = 0
+        
+    def isEmpty(self):
+        return self.head == None
     
     def enqueue(self, val) -> bool:
         newNode = QueueNode(val)
